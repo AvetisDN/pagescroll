@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        html, body {
+            font-family: 'Segoe UI', sans-serif;
+            overflow: hidden;
+            background-color: #bf3b59;
+        }
+
+        .wrap {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .wrap section {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: 500ms ease;
+            opacity: 0;
+        }
+
+        .wrap section.down {
+            transform: translateY(50%);
+        }
+
+        .wrap section.up {
+            transform: translateY(-50%);
+        }
+
+        .wrap section.open {
+            transform: translateY(0);
+            opacity: 1;
+            z-index: 9998;
+        }
+
+        .wrap section .container {
+            width: 90%;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 40px;
+            color: #fff;
+        }
+
+        .wrap section .container h2 {
+            font-size: 5rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        .wrap section .container p {
+            text-align: left;
+            max-width: 800px;
+            font-weight: 300;
+            margin: 15px auto;
+        }
+
+        .wrap nav {
+            position: absolute;
+            width: 10%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .wrap nav ul {
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .wrap nav ul li a {
+            color: #fbd1a7;
+            text-decoration: none;
+            transition: 250ms ease;
+        }
+
+        .wrap nav ul li a:hover,
+        .wrap nav ul li a.active {
+            color: #ffffff;
+        }
+
+        @media screen and (max-width: 768px) {
+            .wrap section .container {
+                width: 80%;
+                padding: 20px;
+            }
+            .wrap section .container h2 {
+                font-size: 2rem;
+            }
+            .wrap section .container p {
+                margin: 10px 0;
+            }
+            .wrap nav {
+                width: 20%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="wrap">
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#section1">Section 1</a>
+            </li>
+            <li>
+                <a href="#section2">Section 2</a>
+            </li>
+            <li>
+                <a href="#section3">Section 3</a>
+            </li>
+            <li>
+                <a href="#section4">Section 4</a>
+            </li>
+            <li>
+                <a href="#section5">Section 5</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="page" id="section1">
+        <div class="container">
+            <h2>Section 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci, atque commodi consequatur
+                deserunt distinctio doloremque doloribus explicabo id illum in iure minus mollitia nemo obcaecati
+                praesentium quasi quo, reprehenderit sunt tempore velit veniam veritatis! Ab adipisci atque dignissimos
+                eligendi est harum id laboriosam molestias nemo, optio qui soluta voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci, atque commodi consequatur
+                deserunt distinctio doloremque doloribus explicabo id illum in iure minus mollitia nemo obcaecati
+                praesentium quasi quo, reprehenderit sunt tempore velit veniam veritatis! Ab adipisci atque dignissimos
+                eligendi est harum id laboriosam molestias nemo, optio qui soluta voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci, atque commodi consequatur
+                deserunt distinctio doloremque doloribus explicabo id illum in iure minus mollitia nemo obcaecati
+                praesentium quasi quo, reprehenderit sunt tempore velit veniam veritatis! Ab adipisci atque dignissimos
+                eligendi est harum id laboriosam molestias nemo, optio qui soluta voluptatem.</p>
+        </div>
+    </section>
+    <section class="page" id="section2">
+        <div class="container">
+            <h2>Section 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci, atque commodi consequatur
+                deserunt distinctio doloremque doloribus explicabo id illum in iure minus mollitia nemo obcaecati
+                praesentium quasi quo, reprehenderit sunt tempore velit veniam veritatis! Ab adipisci atque dignissimos
+                eligendi est harum id laboriosam molestias nemo, optio qui soluta voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci, atque commodi consequatur
+                deserunt distinctio doloremque doloribus explicabo id illum in iure minus mollitia nemo obcaecati
+                praesentium quasi quo, reprehenderit sunt tempore velit veniam veritatis! Ab adipisci atque dignissimos
+                eligendi est harum id laboriosam molestias nemo, optio qui soluta voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci, atque commodi consequatur
+                deserunt distinctio doloremque doloribus explicabo id illum in iure minus mollitia nemo obcaecati
+                praesentium quasi quo, reprehenderit sunt tempore velit veniam veritatis! Ab adipisci atque dignissimos
+                eligendi est harum id laboriosam molestias nemo, optio qui soluta voluptatem.</p>
+        </div>
+    </section>
+    <section class="page" id="section3">
+        <div class="container">
+            <h2>Section 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci, atque commodi consequatur
+                deserunt distinctio doloremque doloribus explicabo id illum in iure minus mollitia nemo obcaecati
+                praesentium quasi quo, reprehenderit sunt tempore velit veniam veritatis! Ab adipisci atque dignissimos
+                eligendi est harum id laboriosam molestias nemo, optio qui soluta voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci, atque commodi consequatur
+                deserunt distinctio doloremque doloribus explicabo id illum in iure minus mollitia nemo obcaecati
+                praesentium quasi quo, reprehenderit sunt tempore velit veniam veritatis! Ab adipisci atque dignissimos
+                eligendi est harum id laboriosam molestias nemo, optio qui soluta voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci, atque commodi consequatur
+                deserunt distinctio doloremque doloribus explicabo id illum in iure minus mollitia nemo obcaecati
+                praesentium quasi quo, reprehenderit sunt tempore velit veniam veritatis! Ab adipisci atque dignissimos
+                eligendi est harum id laboriosam molestias nemo, optio qui soluta voluptatem.</p>
+        </div>
+    </section>
+    <section class="page" id="section4">
+        <div class="container">
+            <h2>Section 4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci, atque commodi consequatur
+                deserunt distinctio doloremque doloribus explicabo id illum in iure minus mollitia nemo obcaecati
+                praesentium quasi quo, reprehenderit sunt tempore velit veniam veritatis! Ab adipisci atque dignissimos
+                eligendi est harum id laboriosam molestias nemo, optio qui soluta voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci, atque commodi consequatur
+                deserunt distinctio doloremque doloribus explicabo id illum in iure minus mollitia nemo obcaecati
+                praesentium quasi quo, reprehenderit sunt tempore velit veniam veritatis! Ab adipisci atque dignissimos
+                eligendi est harum id laboriosam molestias nemo, optio qui soluta voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci, atque commodi consequatur
+                deserunt distinctio doloremque doloribus explicabo id illum in iure minus mollitia nemo obcaecati
+                praesentium quasi quo, reprehenderit sunt tempore velit veniam veritatis! Ab adipisci atque dignissimos
+                eligendi est harum id laboriosam molestias nemo, optio qui soluta voluptatem.</p>
+        </div>
+    </section>
+    <section class="page" id="section5">
+        <div class="container">
+            <h2>Section 5</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci, atque commodi consequatur
+                deserunt distinctio doloremque doloribus explicabo id illum in iure minus mollitia nemo obcaecati
+                praesentium quasi quo, reprehenderit sunt tempore velit veniam veritatis! Ab adipisci atque dignissimos
+                eligendi est harum id laboriosam molestias nemo, optio qui soluta voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci, atque commodi consequatur
+                deserunt distinctio doloremque doloribus explicabo id illum in iure minus mollitia nemo obcaecati
+                praesentium quasi quo, reprehenderit sunt tempore velit veniam veritatis! Ab adipisci atque dignissimos
+                eligendi est harum id laboriosam molestias nemo, optio qui soluta voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci, atque commodi consequatur
+                deserunt distinctio doloremque doloribus explicabo id illum in iure minus mollitia nemo obcaecati
+                praesentium quasi quo, reprehenderit sunt tempore velit veniam veritatis! Ab adipisci atque dignissimos
+                eligendi est harum id laboriosam molestias nemo, optio qui soluta voluptatem.</p>
+        </div>
+    </section>
+
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.touchSwipe.min.js"></script>
+<script>
+
+    $(function () {
+
+        let wrap = $('.wrap');
+        let pages = $('.page');
+        let links = $('nav a');
+        let activePage = 0;
+        let scrollSumm = 0;
+
+        preparePages();
+        changePage();
+
+        function preparePages() {
+            pages.each(function (index, item) {
+                if (index < activePage) {
+                    $(item).removeClass('down');
+                    $(item).addClass('up');
+                } else if (index > activePage) {
+                    $(item).removeClass('up');
+                    $(item).addClass('down');
+                }
+            });
+        }
+
+        function changePage() {
+            preparePages();
+            pages.removeClass('open');
+            pages.eq(activePage).addClass('open');
+            links.removeClass('active');
+            links.eq(activePage).addClass('active');
+            $('.wrap').off('mousewheel',scrollSpy);
+            setTimeout(function(){
+                $('.wrap').on('mousewheel', scrollSpy);
+            }, 500);
+        }
+
+        links.on('click', function (event) {
+            event.preventDefault();
+            activePage = $(this).parent().index();
+            console.log(activePage);
+            changePage();
+        });
+
+        $(window).on('keyup', function (event) {
+            event.preventDefault();
+            if (event.key === 'ArrowUp' || event.key === 'ArrowLeft' || event.key === 'PageUp') {
+                if (activePage > 0) activePage--;
+                changePage();
+            }
+            if (event.key === 'ArrowDown' || event.key === 'ArrowRight' || event.key === 'PageDown') {
+                if (activePage < pages.length - 1) activePage++;
+                changePage();
+            }
+            if (event.key === 'Home') {
+                activePage = 0;
+                changePage();
+            }
+            if (event.key === 'End') {
+                activePage = pages.length - 1;
+                changePage();
+            }
+        });
+
+        wrap.on('mousewheel', scrollSpy);
+
+        function scrollSpy(event) {
+            scrollSumm += event.deltaY;
+            if(scrollSumm === -3) {
+                if (activePage < pages.length - 1) activePage++;
+                changePage();
+                scrollSumm = 0;
+            }
+            if(scrollSumm === 3) {
+                if (activePage > 0) activePage--;
+                changePage();
+                scrollSumm = 0;
+            }
+            setTimeout(function () {
+                scrollSumm = 0;
+            }, 400);
+        }
+
+        wrap.swipe({
+            swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+                if(direction === 'up' && distance >= 100) {
+                    if (activePage < pages.length - 1) activePage++;
+                    changePage();
+                }
+                if(direction === 'down' && distance >= 100) {
+                    if (activePage > 0) activePage--;
+                    changePage();
+                }
+            }
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
